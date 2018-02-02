@@ -5,7 +5,7 @@ namespace App\Models;
 class Topic extends Model
 {
     protected $fillable = ['title', 'body', 'category_id', 'excerpt', 'slug'];
-
+    use Traits\ActiveUserHelper;
     public function category()
     {
         return $this->belongsTo(Category::class);
